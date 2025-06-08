@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacation Booking Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    
+    <div class="flex flex-col ">
+
+ <!-- Responsive Header (Tailwind Only) -->
+<header class=" shadow-sm px-6 py-4">
+  <div class="flex justify-between items-center">
+    <div class="text-[22px] font-bold text-black">AyatStudio</div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex items-center gap-6">
+      <a href="#" class="text-black text-lg hover:text-blue-500">Home</a>
+      <a href="#" class="text-black text-lg hover:text-blue-500">Umrah</a>
+      <a href="#" class="text-black text-lg hover:text-blue-500">Halal Hotels</a>
+      <a href="#" class="text-black text-lg hover:text-blue-500">Contact</a>
+      <button class="border border-black text-black px-3 py-1 hover:bg-black hover:text-white transition">
+        Login
+      </button>
+    </nav>
+
+    <!-- Mobile Hamburger Menu (Right side) -->
+    <details class="md:hidden relative">
+      <summary class="list-none cursor-pointer">
+        <img src="./assets/hamburger.svg" alt="menu" class="h-6 w-6" />
+      </summary>
+
+      <!-- Mobile Dropdown Menu -->
+      <nav class="absolute right-0 mt-2 bg-white rounded shadow-md flex flex-col gap-3 px-4 py-3 w-48 z-50">
+        <a href="#" class="text-black text-base hover:text-blue-500">Home</a>
+        <a href="#" class="text-black text-base hover:text-blue-500">Umrah</a>
+        <a href="#" class="text-black text-base hover:text-blue-500">Halal Hotels</a>
+        <a href="#" class="text-black text-base hover:text-blue-500">Contact</a>
+        <button class="mt-2 border border-black text-black px-3 py-1 hover:bg-black hover:text-white transition text-sm">
+          Login
+        </button>
+      </nav>
+    </details>
+  </div>
+</header>
+
+
+
+<div class="w-[100vw] mx-auto relative">
+  <!-- Hero Image -->
+  <img src="https://www.nusuk.sa/_next/image?url=%2Fuploads%2F2_Banner_45e5ce3e20.jpg&w=1920&q=95" alt="Islamic Vacation"
+       class="w-full h-[420px] object-cover opacity-100" />
+
+  <!-- Hero Text -->
+  <div class="absolute top-[20%] left-4 md:left-10 text-white z-10">
+    <h1 class="text-3xl md:text-5xl font-bold mb-2 leading-tight">Enjoy Your Peaceful<br>Islamic Vacation</h1>
+    <p class="text-sm md:text-base max-w-[400px]">Visit spiritual places, peaceful retreats, and reconnect with nature in a halal, modest environment.</p>
+  </div>
+
+  <!-- Small Screen: Toggle Button Only -->
+  <details class="md:hidden bg-white rounded-xl shadow-md mt-5 p-3">
+    <summary class="flex items-center gap-2 font-semibold cursor-pointer text-black">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      Show Travel Info
+    </summary>
+
+    <!-- All Card Content (Mobile view) -->
+    <div class="mt-4 space-y-4">
+      <!-- Facilities -->
+      <div>
+        <h1 class="text-lg font-bold mb-2">Facilities</h1>
+        <div class="flex flex-wrap items-center gap-5">
+          <div class="flex flex-col items-center text-center w-[70px]">
+            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" class="w-10 h-10 bg-gray-100 p-1.5 rounded-full" />
+            <p class="text-xs font-semibold mt-1">Prayer</p>
+          </div>
+          <div class="flex flex-col items-center text-center w-[70px]">
+            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" class="w-10 h-10 bg-gray-100 p-1.5 rounded-full" />
+            <p class="text-xs font-semibold mt-1">Halal</p>
+          </div>
+          <div class="flex flex-col items-center text-center w-[70px]">
+            <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" class="w-10 h-10 bg-gray-100 p-1.5 rounded-full" />
+            <p class="text-xs font-semibold mt-1">Family</p>
+          </div>
+          <div class="flex flex-col items-center text-center w-[70px]">
+            <img src="https://img.icons8.com/color/48/wifi--v1.png" class="w-10 h-10 bg-gray-100 p-1.5 rounded-full" />
+            <p class="text-xs font-semibold mt-1">Wifi</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hotel Info -->
+      <div>
+        <p class="font-semibold text-[16px]">Hotel for you</p>
+        <p class="text-sm text-gray-500">5 days & 6 nights</p>
+        <button class="mt-2 bg-blue-600 text-white text-sm py-1 px-4 rounded-md"> $4000 </button>
+      </div>
+
+      <!-- Search -->
+      <div class="relative w-full max-w-[200px]">
+        <input type="text" placeholder="Search..." class="w-full border border-gray-300 rounded-full px-3 py-1 pr-8 text-sm" />
+        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">🔍</span>
+      </div>
+
+      <!-- Avatars -->
+      <div class="flex gap-3">
+        <img src="https://i.pravatar.cc/40?img=10" class="w-8 h-8 rounded-full" />
+        <img src="https://i.pravatar.cc/40?img=20" class="w-8 h-8 rounded-full" />
+        <img src="https://i.pravatar.cc/40?img=30" class="w-8 h-8 rounded-full" />
+      </div>
+
+      <!-- See More -->
+      <div>
+        <button class="text-blue-600 text-sm font-medium underline">See more</button>
+      </div>
+    </div>
+  </details>
+
+  <!-- Large Screen: Full Floating Card -->
+  <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 -bottom-[70px] w-[70%] bg-white rounded-xl p-6 shadow-lg justify-between items-start gap-6 z-20">
+
+    <!-- Facilities -->
+    <div class="w-1/2">
+      <h1 class="text-2xl font-bold mb-4">Facilities</h1>
+      <div class="flex flex-wrap items-center gap-5">
+        <div class="flex flex-col items-center text-center w-[70px]">
+          <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" class="w-10 h-10 bg-gray-100 p-1.5 rounded-full" />
+          <p class="text-xs font-semibold mt-1">Prayer</p>
+        </div>
+        <div class="flex flex-col items-center text-center w-[70px]">
+          <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" class="w-10 h-10 bg-gray-100 p-1.5 rounded-full" />
+          <p class="text-xs font-semibold mt-1">Halal</p>
+        </div>
+        <div class="flex flex-col items-center text-center w-[70px]">
+          <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" class="w-10 h-10 bg-gray-100 p-1.5 rounded-full" />
+          <p class="text-xs font-semibold mt-1">Family</p>
+        </div>
+        <div class="flex flex-col items-center text-center w-[70px]">
+          <img src="https://img.icons8.com/color/48/wifi--v1.png" class="w-10 h-10 bg-gray-100 p-1.5 rounded-full" />
+          <p class="text-xs font-semibold mt-1">Wifi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel Info -->
+    <div class="text-center md:text-left">
+      <p class="font-semibold text-[16px]">Hotel for you</p>
+      <p class="text-sm text-gray-500">5 days & 6 nights</p>
+      <button class="mt-2 bg-blue-600 text-white text-sm py-1 px-4 rounded-md"> $4000 </button>
+    </div>
+
+    <!-- Search & See More -->
+    <div class="flex flex-col gap-2">
+      <div class="relative w-full max-w-[200px]">
+        <input type="text" placeholder="Search..." class="w-full border border-gray-300 rounded-full px-3 py-1 pr-8 text-sm" />
+        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">🔍</span>
+      </div>
+      <div class="flex gap-3 mt-2">
+        <img src="https://i.pravatar.cc/40?img=10" class="w-8 h-8 rounded-full" />
+        <img src="https://i.pravatar.cc/40?img=20" class="w-8 h-8 rounded-full" />
+        <img src="https://i.pravatar.cc/40?img=30" class="w-8 h-8 rounded-full" />
+      </div>
+      <div>
+        <button class="text-blue-600 text-sm font-medium underline">See more</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="py-12 bg-white">
+  <h2 class="text-center text-xl font-semibold mb-6">Entire city of choice</h2>
+
+  <div class="bg-blue-100 py-10 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="Rectangle 63.png" alt="Resort 1" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <p class="text-red-600 font-bold text-sm">$600.00</p>
+          <p class="font-semibold text-black text-sm">Booking ID: 9837432</p>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-gray-500 text-sm">Turkey resort</p>
+            <img src="https://img.icons8.com/fluency/48/null/booking.png" alt="booking icon" class="w-6 h-6">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="Rectangle 64.png" alt="Resort 2" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <p class="text-red-600 font-bold text-sm">$600.00</p>
+          <p class="font-semibold text-black text-sm">Booking ID: 9837432</p>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-gray-500 text-sm">Turkey resort</p>
+            <img src="https://img.icons8.com/fluency/48/null/booking.png" alt="booking icon" class="w-6 h-6">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="Rectangle 65.png" alt="Resort 3" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <p class="text-red-600 font-bold text-sm">$600.00</p>
+          <p class="font-semibold text-black text-sm">Booking ID: 9837432</p>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-gray-500 text-sm">Turkey resort</p>
+            <img src="https://img.icons8.com/fluency/48/null/booking.png" alt="booking icon" class="w-6 h-6">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Down Arrow -->
+    <!-- <div class="flex justify-center mt-8">
+      <div class="w-10 h-10 rounded-full bg-black shadow flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg"  color-white class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+
+<section class="py-12 px-4 bg-white">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+
+    <!-- Left Side -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h2 class="text-xl font-bold mb-2">Resort Surprises</h2>
+      <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <ul class="space-y-4">
+        <li class="flex items-center gap-3 justify-center md:justify-start">
+          <img src="https://cdn-icons-png.flaticon.com/512/727/727803.png" alt="Infinity Pool" class="w-7 h-7 bg-indigo-100 p-1 rounded-full">
+          <span>Infinity Pool</span>
+        </li>
+        <li class="flex items-center gap-3 justify-center md:justify-start">
+          <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="The Beach" class="w-7 h-7 bg-indigo-100 p-1 rounded-full">
+          <span>The Beach</span>
+        </li>
+        <li class="flex items-center gap-3 justify-center md:justify-start">
+          <img src="https://cdn-icons-png.flaticon.com/512/754/754878.png" alt="Beach Surprise" class="w-7 h-7 bg-indigo-100 p-1 rounded-full">
+          <span>Beach Surprise</span>
+        </li>
+        <li class="flex items-center gap-3 justify-center md:justify-start">
+          <img src="https://cdn-icons-png.flaticon.com/512/2331/2331966.png" alt="Beach Activities" class="w-7 h-7 bg-indigo-100 p-1 rounded-full">
+          <span>Beach Activities</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right Side -->
+    <div class="w-full md:w-1/2 flex flex-col items-center">
+      <!-- Main Video Thumbnail -->
+      <div class="relative w-full max-w-md overflow-hidden rounded-xl shadow-xl">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Video" class="w-full h-64 object-cover" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thumbnails -->
+      <div class="flex items-center justify-center gap-4 mt-4">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="thumb1" class="w-10 h-10 rounded-full object-cover shadow">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="thumb2" class="w-10 h-10 rounded-full object-cover shadow">
+        <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="thumb3" class="w-10 h-10 rounded-full object-cover shadow">
+      </div>
+      <p class="text-sm text-gray-500 mt-1">Play your favourite</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-12 px-4 bg-white">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+
+    <!-- Left side: Image cards -->
+    <div class="relative w-full lg:w-1/2 flex justify-center gap-4">
+      <!-- Image Cards -->
+      <div class="flex gap-4">
+        <img src="Rectangle 67.png" alt="Resort 1" class="w-28 h-44 md:w-36 md:h-52 lg:w-40 lg:h-60 object-cover rounded-2xl shadow-md" />
+        <img src="Rectangle 68.png" alt="Resort 2" class="w-28 h-44 md:w-36 md:h-52 lg:w-40 lg:h-60 object-cover rounded-2xl shadow-md" />
+        <img src="Rectangle 69.png" alt="Resort 3" class="w-28 h-44 md:w-36 md:h-52 lg:w-40 lg:h-60 object-cover rounded-2xl shadow-md" />
+      </div>
+
+      <!-- Floating Card -->
+      <div class="absolute bottom-[-1rem] left-1/2 -translate-x-1/2 bg-white p-4 px-6 rounded-xl shadow-lg flex items-center justify-between w-72">
+        <div>
+          <p class="font-semibold text-gray-800">Sajid Resort</p>
+          <button class="bg-orange-500 text-white text-sm px-4 py-1 rounded-full mt-1 hover:bg-orange-600">Book Now</button>
+        </div>
+        <div class="flex items-center gap-1">
+          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .587l3.668 7.571L24 9.423l-6 5.847L19.335 24 12 20.202 4.665 24 6 15.27 0 9.423l8.332-1.265z"/>
+          </svg>
+          <span class="text-sm font-medium text-gray-700">4.3</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side: Text content -->
+    <div class="w-full lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0">
+      <p class="text-sm text-gray-500 mb-1">Welcome to Sajid Studio resort</p>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Relaxing Pleasure</h2>
+      <p class="text-gray-600 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur semper vitae integer eget velit lobortis. 
+        Maecenas ultrices nunc lobortis ac varius neque eget. Placerat auctor enim nisl erat, in sem et. 
+        Elementum nec consequat vulputate nibh nisl ultrices diam sapien nibh.
+      </p>
+    </div>
+  </div>
+</section>
+
+ <!-- Section Container -->
+ <section class="bg-blue-100 py-8 px-4">
+  <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-6 md:flex md:items-center md:justify-between relative overflow-hidden">
+    
+    <!-- Airline List -->
+    <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <h2 class="col-span-2 font-semibold text-sm">Search for other Top Airlines</h2>
+      
+      <!-- Airline Item -->
+      <div class="flex items-center space-x-3">
+        <img src="Ellipse 25.png" class="w-6 h-6" alt="Biman BD" />
+        <span class="text-sm">Biman BD Airline</span>
+      </div>
+      
+      <div class="flex items-center space-x-3">
+        <img src="Ellipse 27.png" class="w-6 h-6" alt="Hello" />
+        <span class="text-sm">Hello Int. Airlines</span>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <img src="Badal Airline.png" class="w-6 h-6" alt="Badal" />
+        <span class="text-sm">Badal Airline</span>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <img src="Ellipse 28.png" class="w-6 h-6" alt="Pakistan" />
+        <span class="text-sm">Pakistan International Airlines</span>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <img src="Ellipse 29.png" class="w-6 h-6" alt="Raza" />
+        <span class="text-sm">Raza Airline</span>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <img src="Ellipse 30.png" class="w-6 h-6" alt="Hello Intl" />
+        <span class="text-sm">Hello International Airlines</span>
+      </div>
+    </div>
+
+    <!-- Woman Image -->
+    <!-- <div class="hidden md:block absolute right-0 bottom-0">
+      <img src="_dH-oQF9w-Y.png" alt="Woman" class="h-60 object-contain" />
+    </div> -->
+  </div>
+</section>
+
+
+
+  <!-- Top Section -->
+  <section class="text-center px-4 py-10">
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">Get better work</h1>
+    <p class="text-sm text-gray-600 mb-6">See why million of people accross 195<br>uses Desh dot</p>
+    <div class="flex justify-center items-center flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <input type="email" placeholder="artalisajid@gmail.com" class="px-4 py-2 w-full sm:w-auto border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <button class="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700">Try Free</button>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="border-t mt-10 pt-10 px-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm text-gray-600 mb-6">
+      
+      <!-- Sajid Studio -->
+      <div>
+        <h4 class="text-black font-semibold mb-2">Sajid Studio</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="text-black font-semibold mb-2">Links</h4>
+        <ul class="space-y-1">
+          <li>Home</li>
+          <li>Prior</li>
+          <li>Donload</li>
+          <li>About</li>
+          <li>Service</li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h4 class="text-black font-semibold mb-2">Support</h4>
+        <ul class="space-y-1">
+          <li>FAQ</li>
+          <li>How it</li>
+          <li>Features</li>
+          <li>Contact</li>
+          <li>Reporting</li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div>
+        <h4 class="text-black font-semibold mb-2">Contact Us</h4>
+        <p>+923431279488</p>
+        <p>artalisajid@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t pt-4 pb-6 text-sm text-gray-500 flex flex-col sm:flex-row justify-between items-center">
+      <p>Copyright & Design by Sajid</p>
+      <div class="flex space-x-4 mt-2 sm:mt-0">
+        <a href="#">Terms of use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+</div>
+  </body>
+</html>
